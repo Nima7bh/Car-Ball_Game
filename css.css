@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 83.5vh;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 70px;
+  z-index: -1;
+  background: url(.//rubber-man-9.gif) no-repeat border-box content-box fixed;
+  background-size: 250px 200px;
+
+  animation: animatedBackground 5s linear infinite alternate;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 100% 75%;
+  }
+  to {
+    background-position: 0% 100%;
+  }
+}
+
+.mgt {
+  margin-top: 10px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border: 3px solid yellow;
+  border-radius: 100%;
+  background-color: rgb(11, 5, 5);
+  color: white;
+  display: flex;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.move {
+  animation: bounce 800ms alternate 12 ease-in;
+}
+@keyframes bounce {
+  0% {
+    transform: translate(px, 0px);
+  }
+  20% {
+    border-color: blue;
+  }
+  40% {
+    border-color: red;
+  }
+  60% {
+    border-color: green;
+  }
+  80% {
+    border-color: yellow;
+  }
+  100% {
+    transform: translate(0px, 300px);
+  }
+}
+
+.rotat {
+  animation: rot 1600ms alternate 6 linear;
+  position: relative;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(9000deg);
+  }
+}
+
+.pol {
+  animation: strok 4800ms alternate 2 linear;
+}
+
+@keyframes strok {
+  20% {
+    fill: blue;
+  }
+  40% {
+    fill: red;
+  }
+  60% {
+    fill: green;
+  }
+  80% {
+    fill: purple;
+  }
+}
+
+.formDiv {
+  height: 16vh;
+}
+
+.form {
+  padding: 5px 0px 5px 15px;
+  display: flex;
+  justify-content: start;
+  max-width: 15%;
+  min-width: 227px;
+  border: 1px solid green;
+  border-radius: 10px;
+  margin: 10px;
+  height: 100%;
+  background: linear-gradient(to left, lightgreen, lightyellow);
+}
+/* *************************************Responsive**********************************  */
+@media screen and (min-width: 425px) {
+  .container {
+    padding-top: 15px;
+  }
+
+  @keyframes bounce {
+    100% {
+      transform: translate(0px, 400px);
+    }
+  }
+  .form {
+    padding: 10px;
+  }
+  .formDiv {
+    height: 15vh;
+  }
+}
+.form2 {
+  padding: 15px;
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  text-align: center;
+  z-index: 100;
+}
+.subBtn {
+  width: 60px;
+  margin-left: 5px;
+  border-radius: 5px;
+  border-color: #ffffff;
+  box-shadow: 0px 0px 0px 1px #373737;
+  cursor: pointer;
+  background: white;
+}
+.subBtn:hover {
+  background-color: #fff9f9;
+}
+
+.moveBtn {
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 3px;
+  border-radius: 10px;
+  border-color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #373737;
+}
+.moveBtn:hover {
+  background-color: #fff9f9;
+}
+.restBtn {
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 10px;
+  border-color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #373737;
+}
+.textBox {
+  width: 90%;
+  padding: 2px;
+}
+.sidebyside {
+  display: flex;
+  justify-content: space-evenly;
+}
+.dispnone {
+  display: none;
+}
+.error {
+  color: red;
+  font-size: 13px;
+  padding-left: 7px;
+  font-weight: bold;
+}
